@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나의 서버 목록 - 홈</title>
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <nav class="main-nav" id="mainNav">
+        <div class="nav-content container">
+            <a href="home.html" class="logo">
+                <img src="img/logo.png" alt="사이트 로고">
+            </a>
+            <ul id="navLinksContainer"></ul>
+        </div>
+    </nav>
+
+    <div class="scroll-container">
+        <section class="full-page hero-section">
+            <div class="content container">
+                <h1>찾고 있던 디스코드 서버, <br>여기 다 있어요.</h1>
+                <p>게임, 개발, 창작, 음악 등 다양한 관심사의 커뮤니티를 만나보세요.</p>
+                <a href="index.html" class="button invite-button">서버 목록 보러가기</a>
+            </div>
+        </section>
+
+        <section class="full-page feature-section feature-1">
+            <div class="content container">
+                <img src="img/check.png" alt="엄선된 목록 이모지" class="emoji1"> <h2>엄선된 서버 목록</h2>
+                <p id="not scamful">완벽한 검토를 통해 사기 없는 서버들을 준비했습니다.</p>
+            </div>
+        </section>
+
+        <section class="full-page feature-section feature-2">
+            <div class="content container">
+                <img src="img/list.png" alt="카테고리 탐색 이모지" class="emoji2">
+                <h2>카테고리별 탐색</h2>
+                <p>여러분들이 관심 있는 주제의 서버를 쉽게 찾아보세요.</p>
+                </div>
+        </section>
+        <section class="full-page final-section">
+            <div class="content container">
+                <h2>지금 바로 참여하세요!</h2>
+                <p>다양한 서버에서 새로운 친구들과 관심사를 나눠보세요.</p>
+                <a href="index.html" class="button invite-button">서버 목록 보러가기</a>
+            </div>
+            <footer class="site-footer">
+                <p>&copy; 2025 RoFolder. All Rights Reserved.</p>
+                <p>본 페이지는 디스코드 서버 소개를 목적으로 하며, 각 서버의 운영과 관련이 없습니다. 서버 이용 시 각 서버의 규칙을 준수해 주세요.</p>
+                <p>본인 서버 삭제를 원할시 로폴더 디스코드에 접속하여 문의해주세요.</p>
+            </footer>
+        </section>
+    </div>
+
+    <script src="data.js"></script>
+    <script>
+        // Intersection Observer 설정
+        const sections = document.querySelectorAll('.full-page'); // 모든 섹션 선택
+    
+        const observerOptions = {
+            root: null, // 뷰포트를 기준으로
+            rootMargin: '0px',
+            threshold: 0.4 // 섹션이 40% 보일 때 감지 시작
+        };
+    
+        const observerCallback = (entries, observer) => {
+            entries.forEach(entry => {
+                const content = entry.target.querySelector('.content'); // 각 섹션의 .content 요소
+                if (entry.isIntersecting) { // 화면에 보이면
+                    if (content) {
+                        content.classList.add('is-visible');
+                    }
+                    // 애니메이션을 한 번만 실행하려면 아래 주석 해제
+                    // observer.unobserve(entry.target);
+                } else {
+                    // 화면에서 사라질 때 클래스 제거 (반복 애니메이션 원할 경우)
+                    if (content) {
+                        content.classList.remove('is-visible');
+                    }
+                }
+            });
+        };
+    
+        const observer = new IntersectionObserver(observerCallback, observerOptions);
+    
+        sections.forEach(section => {
+            observer.observe(section); // 각 섹션 감시 시작
+        });
+    
+        // 기존 네비게이션 바 설정 함수 (위에 이미 있다면 중복 추가 X)
+        function setupNavigationBar() {
+            const mainNav = document.getElementById('mainNav');
+            if (!mainNav) return;
+            const navLinksContainer = document.getElementById('navLinksContainer');
+            if (!navLinksContainer) return;
+        
+            navLinksContainer.innerHTML = ''; // 초기화
+        
+            navLinks.forEach(linkInfo => { // data.js의 navLinks 사용
+                const li = document.createElement('li');
+                const a = document.createElement('a');
+                a.href = linkInfo.href;
+                a.textContent = linkInfo.text;
+        
+                // 현재 페이지 링크 활성화 (submit.html 일 때 '서버 등록 문의' 활성화 - 가정)
+                if (linkInfo.href === 'home.html' && window.location.pathname.includes('home.html')) {
+                    a.classList.add('active');
+                }
+                 // 다른 페이지 활성화 로직 추가 필요 시
+                else if (window.location.pathname.endsWith(linkInfo.href)) {
+                    a.classList.add('active');
+                }
+                else if (linkInfo.href === 'home.html' && (window.location.pathname === '/' || window.location.pathname.includes('home.html'))) {
+                    a.classList.add('active');
+                }
+        
+        
+                li.appendChild(a);
+                navLinksContainer.appendChild(li);
+            });
+        }
+        document.addEventListener('DOMContentLoaded', () => {
+            setupNavigationBar(); // 네비게이션 바 설정
+            populateCategories(); // 카테고리 목록 채우기
+        
+            // 폼 제출 이벤트 리스너 (백엔드 없을 시 기본 동작 막기 - 선택적)
+            // const form = document.getElementById('serverSubmitForm');
+            // form.addEventListener('submit', (event) => {
+            //     // 백엔드 구현 전까지 실제 제출 막기
+            //     // event.preventDefault();
+            //     // alert('현재 폼 제출 기능은 구현되지 않았습니다. 백엔드 연동이 필요합니다.');
+            // });
+        });
+    </script>
+</body>
+</html>

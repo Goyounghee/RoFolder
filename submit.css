@@ -1,0 +1,107 @@
+/* submit.css */
+
+.submit-container {
+    padding-top: 40px;
+    padding-bottom: 60px;
+}
+.main-nav {
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    /* padding 삭제 -> .nav-content 에서 처리 */
+    height: 60px;
+    display: flex; /* 내부 요소 정렬 */
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.submit-container header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+.submit-container header h1 {
+    font-size: 2.8em;
+    margin-bottom: 15px;
+}
+.submit-container header p {
+    font-size: 1.1em;
+    color: #6e6e73;
+}
+
+#serverSubmitForm {
+    max-width: 650px; /* 폼 최대 너비 */
+    margin: 0 auto; /* 가운데 정렬 */
+    background-color: #ffffff; /* 폼 배경색 */
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 1em;
+    color: #333;
+}
+
+.form-group input[type="text"],
+.form-group input[type="url"],
+.form-group input[type="email"],
+.form-group select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+    font-size: 1em;
+    font-family: inherit; /* body 폰트 상속 */
+    box-sizing: border-box; /* 패딩 포함 너비 계산 */
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #BF5B04; /* 포커스 시 테두리 색상 (사용자 지정 색상) */
+    box-shadow: 0 0 0 3px rgba(191, 91, 4, 0.15); /* 포커스 시 그림자 효과 */
+}
+
+/* Select 박스 스타일링 (기본 화살표 숨기고 커스텀) */
+.form-group select {
+    appearance: none; /* 기본 화살표 숨김 (웹킷, 모질라 등) */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%236e6e73%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'); /* 커스텀 화살표 아이콘 (SVG 인코딩) */
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 10px 10px;
+    padding-right: 40px; /* 화살표 공간 확보 */
+}
+/* IE 용 화살표 숨김 */
+.form-group select::-ms-expand {
+    display: none;
+}
+
+
+.form-submit {
+    text-align: center;
+    margin-top: 35px;
+}
+
+/* 제출 버튼은 공통 스타일(.button.invite-button) 사용 */
+
+.not-check {
+    font-size: 0.85em;
+    color: #888;
+    text-align: center;
+    background-color: #f9f9f9;
+}

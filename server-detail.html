@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>서버 상세 정보</title>
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="server-detail.css">
+</head>
+<body>
+    <nav class="main-nav" id="mainNav">
+        <div class="nav-content container">
+            <a href="home.html" class="logo">
+                <img src="img/logo.png" alt="사이트 로고">
+            </a>
+            <ul id="navLinksContainer"></ul>
+        </div>
+    </nav>
+
+    <div class="container detail-container">
+        <header class="detail-header">
+            <h1 id="serverName">서버 이름 로딩 중...</h1>
+            <p class="detail-category" id="serverCategory"></p>
+        </header>
+
+        <section class="detail-images" id="serverImages">
+            </section>
+
+        <section class="detail-description">
+            <h2>서버 소개</h2>
+            <p id="serverDescription">설명 로딩 중...</p>
+        </section>
+
+        <section class="detail-invite">
+            <a href="#" id="serverInviteLink" target="_blank" class="button invite-button">서버 참가하기</a>
+        </section>
+
+    </div>
+
+    <script src="data.js"></script>
+    <script src="server-detail.js"></script>
+</body>
+</html>

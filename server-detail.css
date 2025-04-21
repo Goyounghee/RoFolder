@@ -1,0 +1,112 @@
+/* server-detail.css */
+.main-nav {
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    /* padding 삭제 -> .nav-content 에서 처리 */
+    height: 60px;
+    display: flex; /* 내부 요소 정렬 */
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+    width: 100%;
+    box-sizing: border-box;
+}
+.detail-container {
+    max-width: 900px; /* 상세 페이지 컨테이너 너비 조정 (선택 사항) */
+    margin: 40px auto; /* 위아래 여백 */
+    padding: 0 20px;
+    padding-bottom: 60px;
+}
+
+.detail-header {
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative; /* 추천 배지 위치 기준 */
+}
+
+.detail-header h1 {
+    font-size: 2.8em;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #1d1d1f; /* 기본 텍스트 색상 */
+}
+
+.detail-category {
+    font-size: 1.1em;
+    color: #6e6e73; /* 약간 연한 회색 */
+    font-weight: 500;
+}
+
+/* 상세 페이지 추천 배지 */
+.detail-recommend-badge {
+    /* position: absolute; */ /* 혹은 다른 위치 */
+    /* top: 0; */
+    /* right: 0; */
+    display: inline-block; /* 헤더 아래에 텍스트처럼 표시 */
+    margin-top: 15px;
+    background-color: #BF5B04; /* 사용자 지정 색상 */
+    color: white;
+    font-size: 0.9em;
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-weight: 600;
+}
+
+
+/* 이미지 섹션 */
+.detail-images {
+    margin-bottom: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* 반응형 그리드 */
+    gap: 15px;
+}
+
+.detail-images img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: block;
+    transition: transform 0.2s ease; /* 호버 효과 (선택 사항) */
+}
+.detail-images img:hover {
+    transform: scale(1.03); /* 이미지 약간 확대 */
+}
+
+
+/* 설명 섹션 */
+.detail-description {
+    margin-bottom: 40px;
+    background-color: #ffffff; /* 흰색 배경 */
+    padding: 35px; /* 패딩 조정 */
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.detail-description h2 {
+    font-size: 1.6em;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 20px; /* 간격 조정 */
+    padding-bottom: 15px; /* 간격 조정 */
+    border-bottom: 1px solid #e8e8ed; /* 구분선 */
+    color: #1d1d1f;
+}
+
+.detail-description p {
+    font-size: 1.05em;
+    line-height: 1.8; /* 줄간격 조정 */
+    color: #333; /* 약간 더 진한 회색 */
+    white-space: pre-wrap;
+}
+
+/* 초대 섹션 */
+.detail-invite {
+    text-align: center;
+    margin-top: 50px; /* 위쪽 여백 추가 */
+}
+
+/* 상세 페이지의 초대 버튼은 style.css의 .button.invite-button 스타일을 상속받음 */

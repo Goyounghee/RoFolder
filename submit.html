@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>서버 등록 신청</title>
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <link rel="stylesheet" href="style.css"> <link rel="stylesheet" href="submit.css"> </head>
+<body>
+    <nav class="main-nav" id="mainNav">
+        <div class="nav-content container">
+            <a href="home.html" class="logo">
+                <img src="img/logo.png" alt="사이트 로고">
+            </a>
+            <ul id="navLinksContainer"></ul>
+        </div>
+    </nav>
+
+    <div class="container submit-container">
+        <header>
+            <h1>서버 등록 신청</h1>
+            <p>로폴더에 등록하고 싶으신 서버의 정보를 입력해주세요.</p>
+        </header>
+
+        <form id="serverSubmitForm" action="/api/submit-server" method="POST"> <div class="form-group">
+                <label for="serverName">서버 이름</label>
+                <input type="text" id="serverName" name="serverName" required placeholder="예: 로폴더">
+            </div>
+            <div class="form-group">
+                <label for="inviteLink">서버 초대 링크</label>
+                <input type="url" id="inviteLink" name="inviteLink" required placeholder="예: https://discord.gg/Q82Cw9GvV5">
+            </div>
+            <div class="form-group">
+                <label for="ownerTag">서버 소유주 (디스코드 태그)</label>
+                <input type="text" id="ownerTag" name="ownerTag" required placeholder="예: goyounghe">
+            </div>
+            <div class="form-group">
+                <label for="ownerTag">서버 소개</label>
+                <input type="text" id="ownerTag" name="ownerTag" required placeholder="예: 서버를 제공하는 최고의 서버">
+            </div>
+            <div class="form-group">
+                <label for="category">카테고리</label>
+                <select id="category" name="category" required>
+                    <option value="" disabled selected>카테고리를 선택하세요</option>
+                    </select>
+            </div>
+            <div class="form-group">
+                <label for="email">이메일 주소</label>
+                <input type="email" id="email" name="email" required placeholder="예: goyounghe@rofolder.com">
+            </div>
+            <div class="form-group">
+                <label for="check">파트너 심사 기준 및 약관에 대한 동의</label>
+                <input type="text" id="check" name="check" required placeholder="동의합니다.">
+            </div>
+            <p class="not-check">위 사항에 동의하지 않으실 경우 파트너 심사가 거부될 수 있습니다.</p>
+            <div class="form-submit">
+                <button type="submit" class="button invite-button">신청서 제출하기</button>
+            </div>
+        </form>
+    </div>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2025 RoFolder. All Rights Reserved.</p>
+            <p>본 페이지는 디스코드 서버 소개를 목적으로 하며, 각 서버의 운영과 관련이 없습니다. 서버 이용 시 각 서버의 규칙을 준수해 주세요.</p>
+            <p>본인 서버 삭제를 원할시 로폴더 디스코드에 접속하여 문의해주세요.</p>
+        </div>
+    </footer>
+
+    <script src="data.js"></script>
+    <script src="submit.js"></script> </body>
+</html>

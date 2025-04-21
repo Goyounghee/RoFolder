@@ -1,0 +1,196 @@
+/* home.css */
+
+body {
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    margin: 0;
+    background-color: rgb(235, 235, 235); /* 사용자 지정 연한 회색 배경 */
+    color: #1d1d1f; /* 사용자 지정 진한 회색 텍스트 */
+    line-height: 1.6;
+}
+/* 모든 풀페이지 섹션 공통 스타일 */
+.full-page {
+    height: calc(100vh - 60px); /* 네비게이션 바 높이 제외 */
+    width: 100%;
+    /* 각 섹션이 스냅 대상이 되도록 설정 */
+    scroll-snap-align: start; /* 섹션 상단이 뷰포트 상단에 스냅 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* 내부 요소 배치 기준 */
+    overflow: hidden; /* 섹션 넘치는 내용 숨김 */
+    text-align: center;
+}
+
+.full-page .content {
+    max-width: 800px; /* 섹션 내용 최대 너비 */
+    padding: 40px;
+    color: #fff; /* 기본 텍스트 색상 (섹션별 변경 가능) */
+    position: relative; /* 애니메이션 등 위한 기준 */
+    z-index: 2;
+}
+
+.full-page h1 {
+    font-size: 3.5em;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.3;
+}
+.full-page h2 {
+    font-size: 3em;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+.full-page p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.85); /* 약간 투명한 흰색 */
+}
+.full-page .content .emoji1 {
+    width: 100px; /* 이모지 크기 (조정 가능) */
+    height: 100px;
+    margin-bottom: 25px; /* 아래 텍스트와의 간격 */
+    /* 애니메이션 적용을 위해 초기 상태 설정 (선택적) */
+    opacity: 0;
+    transform: translateY(30px) scale(0.9); /* 약간 작게 시작 */
+    /* transition 설정은 .content > * 에 이미 포함되어 있음 */
+     transition-delay: 0.3s; /* 다른 요소보다 먼저 나타나도록 (조정 가능) */
+}
+.full-page .content .emoji2 {
+    width: 100px; /* 이모지 크기 (조정 가능) */
+    height: 100px;
+    margin-bottom: 25px; /* 아래 텍스트와의 간격 */
+    /* 애니메이션 적용을 위해 초기 상태 설정 (선택적) */
+    opacity: 0;
+    transform: translateY(30px) scale(0.9); /* 약간 작게 시작 */
+    /* transition 설정은 .content > * 에 이미 포함되어 있음 */
+     transition-delay: -0.1s; /* 다른 요소보다 먼저 나타나도록 (조정 가능) */
+}
+
+
+/* 섹션별 배경 및 스타일 */
+.hero-section {
+    background: linear-gradient(135deg, #F2CA52 0%, #BF5B04 80%); /* 그라데이션 배경 예시 */
+}
+.hero-section h1 {
+     color: #fff;
+}
+ .hero-section .button.invite-button { /* 버튼 스타일 오버라이드 예시 */
+    background-color: #fff;
+    color: #BF5B04;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+ }
+  .hero-section .button.invite-button:hover {
+     background-color: #f0f0f0;
+  }
+
+
+.feature-section.feature-1 {
+    background-color: #f8f8f8; /* 밝은 배경 */
+}
+ .feature-section.feature-1 .content {
+     color: #1d1d1f; /* 어두운 텍스트 */
+ }
+  .feature-section.feature-1 p {
+      color: #6e6e73;
+  }
+
+.feature-section.feature-2 {
+     background-color: #eef1f5; /* 다른 밝은 배경 */
+}
+.feature-section.feature-2 .content {
+     color: #1d1d1f;
+ }
+ .feature-section.feature-2 p {
+      color: #6e6e73;
+  }
+ /* 마지막 섹션 스타일 수정 */
+.final-section {
+    background: linear-gradient(135deg, #F2CA52 0%, #F2A81D 70%);
+    flex-direction: column; /* 내부 요소를 세로로 쌓음 */
+    justify-content: space-between; /* 콘텐츠는 위쪽, 푸터는 아래쪽 (조정 가능) */
+    /* padding-bottom 제거 또는 조정 필요 */
+}
+
+.final-section .content {
+     /* 기존 스타일 유지 */
+     /* 푸터 공간 확보 위해 약간 위로 올릴 수 있음 */
+     padding-bottom: 20px; /* 예시 */
+}
+.final-section .site-footer {
+    background-color: #e0e0e0; /* 배경색 (기존 배경보다 약간 어둡게) */
+    color: #6e6e73; /* 텍스트 색상 */
+    padding: 30px 0;
+    margin-top: 0px; /* 메인 콘텐츠와의 간격 */
+    border-top: 1px solid rgba(255, 255, 255, 0.2); /* 구분선 색상 조정 */
+    width: 100%; /* 너비 100% */
+    position: relative; /* 필요시 추가 */
+    text-align: center;
+    font-size: 0.9em;
+}
+
+.final-section .site-footer .container {
+    max-width: 1100px; /* 컨테이너 너비 일치 */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.final-section .button.invite-button { /* 버튼 스타일 오버라이드 예시 */
+    background-color: #fff;
+    color: #F2A81D;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+ }
+.final-section .site-footer p {
+    margin: 5px 0;
+    line-height: 1.5;
+    text-align: center;
+    font-size: 1em;
+    color: #6e6e73; /* 사용자 지정 진한 회색 텍스트 */
+}
+
+/* 기존 body 바로 아래 있던 .site-footer 스타일은 제거해도 무방 */
+/* 만약 index.html 등 다른 페이지 푸터에 영향 없도록 하려면 선택자 구체화 필요 */
+/* 예: body > .site-footer { ... } */
+
+/* 스크롤 컨테이너 높이 재확인 (푸터 포함) */
+/* 애니메이션 효과 (간단 예시 - 스크롤 시 나타나는 효과 등은 JS 필요) */
+
+/* 애니메이션 대상 요소의 초기 상태 */
+.full-page .content > * { /* .content 직계 자식 요소들(h1, p, a 등) */
+    opacity: 0;
+    transform: translateY(30px); /* 아래쪽에서 시작 */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* 여러 요소가 순차적으로 나타나도록 transition-delay 추가 (선택적) */
+.full-page .content h1,
+.full-page .content h2 {
+    transition-delay: 0.2s;
+}
+.full-page .content p {
+    transition-delay: 0.4s;
+}
+.full-page .content .button,
+.full-page .content .emoji1 { /* 이모지도 애니메이션 적용 시 */
+    transition-delay: 0.1s;
+}
+.full-page .content .emoji2 { /* 이모지도 애니메이션 적용 시 */
+    transition-delay: 0.1s;
+}
+
+
+
+/* 화면에 보일 때 적용될 스타일 (.is-visible 클래스 추가 시) */
+.full-page .content.is-visible > * {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 기존 .full-page .content 에 있던 animation 속성 제거 */
+/* .full-page .content { ... animation: fadeInContent ... 삭제 } */
+
+
+/* 네비게이션 바 아래부터 섹션 시작하도록 body 패딩 추가 (선택적) */
+/* body { padding-top: 60px; } -> scroll-container 높이 조절로 대체함 */
+
+/* 푸터가 스크롤 컨테이너 밖에 오도록 처리 필요 */
+/* body 구조가 nav, scroll-container, footer 순서이므로 자연스럽게 됨 */
