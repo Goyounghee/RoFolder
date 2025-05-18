@@ -79,7 +79,61 @@ const servers = [
         description: "모든 로샵인들을 위한 서버",
         images: ["img/AssetShop1.png", "img/AssetShop2.png","img/AssetShop3.png", "img/AssetShop4.png"], // img 폴더에 실제 이미지 파일 필요
         inviteLink: "https://discord.gg/Pzh2xPpZ47",
-        isRecommended: true // 
+        isRecommended: false // 
+    },
+    {
+        id: 10,
+        name: "Blox Manager Support",
+        category: "판매",
+        description: "로블록스 그룹 인증 및 관리하는 한국 개발자가 만든 봇 지원 서버",
+        images: ["img/BMSS.png"], // img 폴더에 실제 이미지 파일 필요
+        inviteLink: "https://discord.gg/ANeNwBAt7m",
+        isRecommended: false // 
+    },
+    {
+        id: 11,
+        name: "Terramars Technology Corporation",
+        category: "판매",
+        description: "Roblox 대한민국 군사장비 판매처",
+        images: ["img/TTX1.png", "img/TTX2.png","img/TTX3.png", "img/TTX4.png"],
+        inviteLink: "https://discord.gg/Hf5sUtUmk7",
+        isRecommended: false // 
+    },
+    {
+        id: 12,
+        name: "전구센터",
+        category: "판매",
+        description: "로블록스 24시간 메타버스 전구센터",
+        images: ["img/Light1.png", "img/Light2.png","img/Light3.png", "img/Light4.png"],
+        inviteLink: "https://discord.gg/Hf5sUtUmk7",
+        isRecommended: false // 
+    },
+    {
+        id: 13,
+        name: "The Platform",
+        category: "판매",
+        description: 'The Platform /"가격은 저렴하게, 상품은 확실하게"',
+        images: ["img/TP1.png", "img/TP2.png","img/TP3.png", "img/TP4.png"],
+        inviteLink: "https://discord.gg/3sn47CzJFK",
+        isRecommended: false // 
+    },
+    {
+        id: 14,
+        name: "RS24",
+        category: "판매",
+        description: '소개문구없음, 변경 바랄시 로폴더 디스코드로 문의 부탁드립니다.',
+        images: ["img/RS1.png", "img/RS2.png","img/RS3.png", "img/RS4.png"],
+        inviteLink: "https://discord.gg/vrj38ymmwv",
+        isRecommended: false // 
+    },
+    {
+        id: 15,
+        name: "개인샵",
+        category: "판매",
+        description: '개인샵ㅣ로블록스 모델 판매서버,',
+        images: ["img/PS1.png", "img/PS2.png","img/PS3.png", "img/PS4.png"],
+        inviteLink: "https://discord.gg/dSWpGeYJfu",
+        isRecommended: false // 
     },
 ];
 
