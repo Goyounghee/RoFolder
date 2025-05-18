@@ -135,6 +135,24 @@ const servers = [
         inviteLink: "https://discord.gg/dSWpGeYJfu",
         isRecommended: false // 
     },
+    {
+        id: 16,
+        name: "Karma Shop",
+        category: "판매",
+        description: '카르마 샵은 카르마 소프트웨어 직속 로블록스 개발 샵입니다. 저희는 주로 RP 또는 여러 장르 게임에 도움되는 제품들을 팔고 있는 서버입니다.',
+        images: ["img/Karma1.png", "img/Karma2.png","img/Karma3.png", "img/Karma4.png"],
+        inviteLink: "https://discord.gg/mkdTfNNVHH",
+        isRecommended: false // 
+    },
+    {
+        id: 17,
+        name: "Paint.net",
+        category: "판매",
+        description: "소개문구없음, 변경 바랄시 로폴더 디스코드로 문의 부탁드립니다.",
+        images: ["img/Paint1.png", "img/Paint2.png","img/Paint3.png", "img/Paint4.png"],
+        inviteLink: "https://discord.gg/bCTEkaqVK6",
+        isRecommended: false // 
+    },
 ];
 
 // data.js 파일의 navLinks 수정
