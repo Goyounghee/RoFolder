@@ -68,7 +68,7 @@ const servers = [
         name: "#",
         category: "판매",
         description: "3D 복장, 군 관련 모델 전문 #",
-        images: ["img/1#.png", "img/2#.png","img/3#.png", "img/4#.png"], // img 폴더에 실제 이미지 파일 필요
+        images: ["img/Sh1.png", "img/Sh2.png","img/Sh3.png", "img/Sh4.png"], // img 폴더에 실제 이미지 파일 필요
         inviteLink: "https://discord.gg/Pzh2xPpZ47",
         isRecommended: true // 
     },
