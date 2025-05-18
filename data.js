@@ -34,17 +34,44 @@ const servers = [
         description: "한국로블록스 무료배포 서버",
         images: ["img/Rocord1.png", "img/Rocord2.png", "img/Rocord3.png"], // img 폴더에 실제 이미지 파일 필요
         inviteLink: "https://discord.gg/NC4DQ3Cet9",
-        isRecommended: false // 실제 초대 링크로 변경하세요
-    }
-    // --- 새로운 서버를 추가하려면 이 아래에 같은 형식으로 객체를 추가하세요 ---
-    // {
-    //     id: 5,
-    //     name: "새로운 서버 이름",
-    //     category: "서버 카테고리",
-    //     description: "서버에 대한 상세 설명",
-    //     images: ["img/new_server_1.jpg", "img/new_server_2.jpg"],
-    //     inviteLink: "#"
-    // },
+        isRecommended: true // 실제 초대 링크로 변경하세요
+    },
+    {
+        id: 5,
+        name: "Comet의 상점",
+        category: "판매",
+        description: "건물판매, 음식모델링 판매",
+        images: ["img/Comet1.png", "img/Comet2.png", "img/Comet3.png", "img/Comet4.png"], // img 폴더에 실제 이미지 파일 필요
+        inviteLink: "https://discord.gg/x6Z4dFsMK6",
+        isRecommended: true // 실제 초대 링크로 변경하세요
+    },
+    {
+        id: 6,
+        name: "Artemis",
+        category: "판매",
+        description: "로블록스 한국 커뮤니티 서버입니다.",
+        images: ["img/Artemis1.png", "img/Artemis2.png","img/Artemis3.png", "img/Artemis4.png"], // img 폴더에 실제 이미지 파일 필요
+        inviteLink: "https://discord.gg/3UmfyZFc3Y",
+        isRecommended: true // 실제 초대 링크로 변경하세요
+    },
+    {
+        id: 7,
+        name: "로샵",
+        category: "판매",
+        description: "RoShop, First Step of Development.",
+        images: ["img/RoShop1.png", "img/RoShop2.png","img/RoShop3.png", "img/RoShop4.png"], // img 폴더에 실제 이미지 파일 필요
+        inviteLink: "https://discord.gg/rosyab-704997870310260766",
+        isRecommended: true // 
+    },
+    {
+        id: 8,
+        name: "#",
+        category: "판매",
+        description: "3D 복장, 군 관련 모델 전문 #",
+        images: ["img/#1.png", "img/#2.png","img/#3.png", "img/#4.png"], // img 폴더에 실제 이미지 파일 필요
+        inviteLink: "https://discord.gg/Pzh2xPpZ47",
+        isRecommended: true // 
+    },
 ];
 
 // data.js 파일의 navLinks 수정
