@@ -59,7 +59,7 @@ const servers = [
         name: "로샵",
         category: "판매",
         description: "RoShop, First Step of Development.",
-        images: ["img/RoShop1.png", "img/RoShop2.png","img/RoShop3.png", "img/RoShop4.png"], // img 폴더에 실제 이미지 파일 필요
+        images: ["img/Roshop1.png", "img/Roshop2.png","img/Roshop3.png", "img/Roshop4.png"], // img 폴더에 실제 이미지 파일 필요
         inviteLink: "https://discord.gg/rosyab-704997870310260766",
         isRecommended: true // 
     },
