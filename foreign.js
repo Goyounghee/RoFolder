@@ -158,8 +158,8 @@ const servers = [
 // data.js 파일의 navLinks 수정
 
 const navLinks = [
-    { text: "홈", href: "home.html" },
-    { text: "한국 서버 목록", href: "index.html" },
+    { text: "홈", href: "index.html" },
+    { text: "한국 서버 목록", href: "korea.html" },
     { text: "외국 서버 목록", hrefe: "foreign.html" },
     { text: "서버 등록", href: "submit.html" } // 링크 추가
 ];
