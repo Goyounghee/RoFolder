@@ -5,7 +5,7 @@ const servers = [
         name: "KU's:/STUDIO",
         category: "무료배포",
         description: "에셋&시스템 종합 무료배포 서버",
-        images: ["img/KR/KR/Ku1.png", "img/KR/KR/Ku2.png"], // img 폴더에 실제 이미지 파일 필요
+        images: ["img/KR/Ku1.png", "img/KR/Ku2.png"], // img 폴더에 실제 이미지 파일 필요
         inviteLink: "https://discord.gg/hzXWrRm3BA",
         isRecommended: true // 실제 초대 링크로 변경하세요
     },
@@ -158,8 +158,8 @@ const servers = [
 // data.js 파일의 navLinks 수정
 
 const navLinks = [
-    { text: "홈", href: "home.html" },
-    { text: "한국 서버 목록", href: "index.html" },
+    { text: "홈", href: "index.html" },
+    { text: "한국 서버 목록", href: "home.html" },
     { text: "외국 서버 목록", hrefe: "foreign.html" },
     { text: "서버 등록", href: "submit.html" } // 링크 추가
 ];
