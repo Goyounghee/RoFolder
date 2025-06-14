@@ -73,37 +73,47 @@ body {
     background: linear-gradient(135deg, #F2CA52 0%, #BF5B04 80%); /* 그라데이션 배경 예시 */
 }
 .hero-section h1 {
-     color: #fff;
+    color: #fff;
 }
  .hero-section .button.invite-button { /* 버튼 스타일 오버라이드 예시 */
     background-color: #fff;
     color: #BF5B04;
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
- }
-  .hero-section .button.invite-button:hover {
-     background-color: #f0f0f0;
-  }
+}
+.hero-section .button.invite-button:hover {
+    background-color: #f0f0f0;
+}
 
 
 .feature-section.feature-1 {
     background-color: #f8f8f8; /* 밝은 배경 */
 }
- .feature-section.feature-1 .content {
+.feature-section.feature-1 .content {
      color: #1d1d1f; /* 어두운 텍스트 */
- }
-  .feature-section.feature-1 p {
-      color: #6e6e73;
-  }
+}
+.feature-section.feature-1 p {
+    color: #6e6e73;
+}
 
 .feature-section.feature-2 {
     background-color: #f8f8f8; /* 다른 밝은 배경 */
 }
 .feature-section.feature-2 .content {
-     color: #1d1d1f;
- }
- .feature-section.feature-2 p {
-      color: #6e6e73;
-  }
+    color: #1d1d1f;
+}
+.feature-section.feature-2 p {
+    color: #6e6e73;
+}
+
+.feature-section.feature-3 {
+    background-color: #f8f8f8fb; /* 다른 밝은 배경 */
+}
+.feature-section.feature-3 .content {
+    color: #1d1d1f;
+}
+.feature-section.feature-3 p {
+    color: #6e6e73;
+}
  /* 마지막 섹션 스타일 수정 */
 .final-section {
     background: linear-gradient(135deg, #F2CA52 0%, #F2A81D 70%);
@@ -138,7 +148,7 @@ body {
     background-color: #fff;
     color: #F2A81D;
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
- }
+}
 .final-section .site-footer p {
     margin: 5px 0;
     line-height: 1.5;
@@ -174,6 +184,8 @@ body {
     transition-delay: 0.1s;
 }
 .full-page .content .emoji2 { /* 이모지도 애니메이션 적용 시 */
+    transition-delay: 0.1s;
+}.full-page .content .emoji3 { /* 이모지도 애니메이션 적용 시 */
     transition-delay: 0.1s;
 }
 
