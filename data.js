@@ -104,7 +104,7 @@ const servers = [
         name: "전구센터",
         category: "판매",
         description: "로블록스 24시간 메타버스 전구센터",
-        images: ["img/KR/Light1.png", "img/KR/Light2.png","img/KR/KR/Light3.png", "img/KR/KR/Light4.png"],
+        images: ["img/KR/Light1.png", "img/KR/Light2.png","img/KR/Light3.png", "img/KR/Light4.png"],
         inviteLink: "https://discord.gg/Hf5sUtUmk7",
         isRecommended: false // 
     },
@@ -113,7 +113,7 @@ const servers = [
         name: "The Platform",
         category: "판매",
         description: 'The Platform /"가격은 저렴하게, 상품은 확실하게"',
-        images: ["img/KR/KR/TP1.png", "img/KR/KR/TP2.png","img/KR/KR/TP3.png", "img/KR/KR/TP4.png"],
+        images: ["img/KR/TP1.png", "img/KR/TP2.png","img/KR/TP3.png", "img/KR/TP4.png"],
         inviteLink: "https://discord.gg/3sn47CzJFK",
         isRecommended: false // 
     },
@@ -122,7 +122,7 @@ const servers = [
         name: "RS24",
         category: "판매",
         description: '소개문구없음, 변경 바랄시 로폴더 디스코드로 문의 부탁드립니다.',
-        images: ["img/KR/KR/RS1.png", "img/KR/KR/RS2.png","img/KR/KR/RS3.png", "img/KR/KR/RS4.png"],
+        images: ["img/KR/RS1.png", "img/KR/RS2.png","img/KR/RS3.png", "img/KR/RS4.png"],
         inviteLink: "https://discord.gg/vrj38ymmwv",
         isRecommended: false // 
     },
@@ -131,7 +131,7 @@ const servers = [
         name: "개인샵",
         category: "판매",
         description: '개인샵ㅣ로블록스 모델 판매서버,',
-        images: ["img/KR/KR/PS1.png", "img/KR/KR/PS2.png","img/KR/KR/PS3.png", "img/KR/KR/PS4.png"],
+        images: ["img/KR/PS1.png", "img/KR/PS2.png","img/KR/PS3.png", "img/KR/PS4.png"],
         inviteLink: "https://discord.gg/dSWpGeYJfu",
         isRecommended: false // 
     },
@@ -140,7 +140,7 @@ const servers = [
         name: "Karma Shop",
         category: "판매",
         description: '카르마 샵은 카르마 소프트웨어 직속 로블록스 개발 샵입니다. 저희는 주로 RP 또는 여러 장르 게임에 도움되는 제품들을 팔고 있는 서버입니다.',
-        images: ["img/KR/KR/Karma1.png", "img/KR/KR/Karma2.png","img/KR/KR/Karma3.png", "img/KR/KR/Karma4.png"],
+        images: ["img/KR/Karma1.png", "img/KR/Karma2.png","img/KR/Karma3.png", "img/KR/Karma4.png"],
         inviteLink: "https://discord.gg/mkdTfNNVHH",
         isRecommended: false // 
     },
@@ -149,7 +149,7 @@ const servers = [
         name: "Paint.net",
         category: "판매",
         description: "소개문구없음, 변경 바랄시 로폴더 디스코드로 문의 부탁드립니다.",
-        images: ["img/KR/KR/Paint1.png", "img/KR/KR/Paint2.png","img/KR/KR/Paint3.png", "img/KR/KR/Paint4.png"],
+        images: ["img/KR/Paint1.png", "img/KR/Paint2.png","img/KR/Paint3.png", "img/KR/Paint4.png"],
         inviteLink: "https://discord.gg/bCTEkaqVK6",
         isRecommended: false // 
     },
