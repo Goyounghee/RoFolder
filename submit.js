@@ -57,11 +57,61 @@ document.addEventListener('DOMContentLoaded', () => {
     setupNavigationBar(); // 네비게이션 바 설정
     populateCategories(); // 카테고리 목록 채우기
 
-    // 폼 제출 이벤트 리스너 (백엔드 없을 시 기본 동작 막기 - 선택적)
     const form = document.getElementById('serverSubmitForm');
-    form.addEventListener('submit', (event) => {
-         // 백엔드 구현 전까지 실제 제출 막기
+    form.addEventListener('submit', async (event) => {
         event.preventDefault();
-        alert('현재 폼 제출 기능은 구현되지 않았습니다. 백엔드 연동이 필요합니다.');
+
+        // 폼 데이터 수집
+        const formData = new FormData(form);
+        const data = {
+            serverName: formData.get('serverName'),
+            inviteLink: formData.get('inviteLink'),
+            ownerTag: formData.get('ownerTag'),
+            description: formData.get('description'), // name 변경 반영
+            category: formData.get('category'),
+            email: formData.get('email'),
+            check: formData.get('check')
+        };
+
+        // 디스코드 웹훅 URL (여기에 본인 웹훅 주소 입력)
+        const webhookUrl = "https://discord.com/api/webhooks/1363678854312362084/CfONCgOzLiPFND3196giOLdMV2I2pWVXRw0dErF0_6rbkKaH6fZcUajieuaYyATul9oq";
+
+        // 디스코드 메시지 포맷
+        const payload = {
+            content: null,
+            embeds: [
+                {
+                    title: "서버 등록 신청이 접수되었습니다!",
+                    color: 0xBF5B04,
+                    fields: [
+                        { name: "서버 이름", value: data.serverName, inline: false },
+                        { name: "초대 링크", value: data.inviteLink, inline: false },
+                        { name: "서버 소유주", value: data.ownerTag, inline: false },
+                        { name: "서버 소개", value: data.description, inline: false },
+                        { name: "카테고리", value: data.category, inline: false },
+                        { name: "이메일", value: data.email, inline: false },
+                        { name: "약관 동의", value: data.check, inline: false }
+                    ],
+                    timestamp: new Date().toISOString()
+                }
+            ]
+        };
+
+        try {
+            const response = await fetch(webhookUrl, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(payload)
+            });
+
+            if (response.ok) {
+                alert('신청이 성공적으로 접수되었습니다!');
+                form.reset();
+            } else {
+                alert('신청 접수에 실패했습니다. 다시 시도해주세요.');
+            }
+        } catch (error) {
+            alert('오류가 발생했습니다: ' + error.message);
+        }
     });
 });
